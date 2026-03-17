@@ -6,3 +6,4 @@ func factorial(n) {
 }
 
 result = factorial(5);
+
