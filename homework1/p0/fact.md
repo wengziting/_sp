@@ -1,3 +1,4 @@
+```
 (py310) cccimac@cccimacdeiMac 08-comment % ./compiler p0/fact.p0         
 編譯器生成的中間碼 (PC: Quadruples):
 --------------------------------------------
@@ -25,3 +26,4 @@
 
 全域變數結果:
 >> result = 120
+```
