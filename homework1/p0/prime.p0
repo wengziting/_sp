@@ -30,3 +30,4 @@ func check_prime(n) {
 
 result1 = check_prime(13);
 result2 = check_prime(15);
+
