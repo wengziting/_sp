@@ -17,3 +17,4 @@
 在 FluxScript 中，一段典型的程式碼如下：
 ```flux
 [1, 2, 3, 4, 5] |> sum -> output
+
