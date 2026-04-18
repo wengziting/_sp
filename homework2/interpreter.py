@@ -51,3 +51,4 @@ if __name__ == "__main__":
     tokens = tokenize(example_code)
     interpreter = FluxInterpreter()
     interpreter.run(tokens)
+    
