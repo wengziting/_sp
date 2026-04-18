@@ -1,0 +1,11 @@
+# Python 產生的緩存
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 虛擬環境
+venv/
+env/
+
+# 作業系統暫存
+.DS_Store
