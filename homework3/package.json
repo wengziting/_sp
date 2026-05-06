@@ -1,0 +1,18 @@
+{
+  "name": "my-c0-computer",
+  "version": "1.0.0",
+  "description": "A simple 8-bit CPU emulator inspired by c0computer",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node tests/basic_test.js"
+  },
+  "keywords": [
+    "cpu",
+    "emulator",
+    "8-bit",
+    "education"
+  ],
+  "author": "YourName",
+  "license": "MIT"
+}
