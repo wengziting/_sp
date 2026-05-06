@@ -118,3 +118,4 @@ Philosopher 4 ate 3 meals
 1. **Race Condition**：多執行緒非同步訪問共享資源，採用 Mutex 保護
 2. **Deadlock**：循環等待locks造成的阻塞，採用固定順序或交替順序避免
 3. **Semaphore**：適合生產者-消費者問題的信號量同步
+
