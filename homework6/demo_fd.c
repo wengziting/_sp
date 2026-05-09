@@ -59,6 +59,7 @@ int main(void) {
     printf("新開啟檔案的 FD = %d\n", new_fd);
     printf("（因為 FD 1 剛關閉，所以新 FD 就是 1）\n");
 
+    
     printf("這行會寫入 demo_test.txt 而不是螢幕！\n");
 
     close(new_fd);
