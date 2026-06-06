@@ -9,7 +9,7 @@
 
 ---
 
-## 📝 # HOMEWORK 1：編譯器四大階段精煉
+##  # HOMEWORK 1：編譯器四大階段精煉
 
 ### 1. 詞法分析 (Lexer) —— 切碎與標籤
 * **做什麼**：逐字掃描代碼，把整串字串切碎並貼上標籤（Token）。
@@ -34,7 +34,7 @@
 
 ---
 
-## 📝 # HOMEWORK 2：FluxScript 資料流語言
+##  # HOMEWORK 2：FluxScript 資料流語言
 
 ### 1. 概念簡介
 FluxScript 是一種極簡、意圖導向 (Intent-oriented) 的微型資料流語言。它把複雜的程式邏輯簡化為「水管接水」的過程，讓資料處理變得極度直觀。
@@ -84,7 +84,7 @@ print(result)           # 處理 -> output
 
 返回目錄
 
-📝 # HOMEWORK 4：系統程式與核心觀念（程序與執行緒）
+ # HOMEWORK 4：系統程式與核心觀念（程序與執行緒）
 1. 系統程式（System Programming）
 核心定義：直接與作業系統核心（Kernel）及硬體互動的底層程式設計。
 
@@ -101,7 +101,7 @@ print(result)           # 處理 -> output
 
 程序三狀態：執行中（Running）、就緒（Ready）、阻塞（Blocked，如等待 I/O）。
 
-💡 記憶體佈局（Layout）
+ 記憶體佈局（Layout）
 作業系統透過虛擬記憶體映射實體記憶體，每個程序的內部結構分為：
 
 Text / Data / BSS：存放程式碼與全域/靜態變數。
@@ -117,7 +117,7 @@ Stack（棧）：向下增長，自動管理函數呼叫、傳入參數與區域
 
 返回目錄
 
-📝 # HOMEWORK 5：執行緒同步三大經典問題
+ # HOMEWORK 5：執行緒同步三大經典問題
 1. 銀行存提款問題（Race Condition 競爭條件）
 核心問題：多個執行緒同時讀寫同一個變數（帳戶餘額），導致計算結果互相覆蓋、資料遺失。
 
@@ -161,7 +161,7 @@ full：記錄產品（初始值 = 0）。
 
 返回目錄
 
-📝 # HOMEWORK 6：Unix 檔案描述符與系統調用實戰
+ # HOMEWORK 6：Unix 檔案描述符與系統調用實戰
 1. 檔案描述符 (File Descriptor, FD)
 定義：核心用來識別進程正在存取資源（檔案、管道、Socket）的非負整數。每個進程都有獨立的 FD 表。
 
@@ -194,7 +194,7 @@ C. I/O 重導向：
 
 dup2(oldfd, newfd)：核心功能為複製 oldfd 並覆蓋 newfd。printf 的本質是寫入 FD 1，透過 dup2(fd, 1) 即可將輸出重新導向至檔案。
 
-🛠️ 核心實戰樣式 (Pattern)
+ 核心實戰樣式 (Pattern)
 樣式一：fork + execvp + dup2（實現 ls > output.txt）
 
 C
@@ -230,8 +230,8 @@ void execute_command(Command *cmd) {
 }
 返回目錄
 
-📝 # HOMEWORK 7：軟硬體邊界與多工同步懶人包
-🛠️ 第一部分：自製 CPU 核心
+ # HOMEWORK 7：軟硬體邊界與多工同步懶人包
+ 第一部分：自製 CPU 核心
 三大件：
 
 Memory：256 格子，同時裝指令與資料。
@@ -242,7 +242,7 @@ Opcode：指令代碼（如 0x02 = 加法）。
 
 執行循環：Fetch（拿指令、PC+1）➡️ Decode（用 switch 判斷）➡️ Execute（ALU 計算）。
 
-🔀 第二部分：作業系統多工與同步
+ 第二部分：作業系統多工與同步
 匿名管道 (Pipe)
 
 本質：Kernel 記憶體內的 FIFO 緩衝區，限有 fork() 血緣的進程單向通訊。
