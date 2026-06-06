@@ -1,5 +1,23 @@
 由open code 與 gemini完成(有些對話遺失)
+
+目錄
+# HOMEWORK 1：編譯器四大階段精煉
+
+# HOMEWORK 2：FluxScript 資料流語言
+
+# HOMEWORK 3：自製 8-Bit 虛擬電腦硬體架構
+
+# HOMEWORK 4：系統程式與核心觀念（程序與執行緒）
+
+# HOMEWORK 5：執行緒同步三大經典問題
+
+# HOMEWORK 6：Unix 檔案描述符與系統調用實戰
+
+# HOMEWORK 7：軟硬體邊界與多工同步懶人包
+
+
 # HOMEWORK1
+
 1. 詞法分析 (Lexer) —— 切碎與標籤
 做什麼：逐字掃描代碼，把整串字串切碎並貼上標籤（Token）。
 
