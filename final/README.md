@@ -191,32 +191,50 @@ C. I/O 重導向：dup2(oldfd, newfd)
 樣式一：fork + execvp + dup2（實現 ls > output.txt）
 C
 int fd = open("output.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
+
 if (fork() == 0) {
+
     dup2(fd, STDOUT_FILENO); // stdout (1) 重導向到檔案
+    
     close(fd);               // 關閉多餘的 fd
     
     char *args[] = {"ls", "-l", NULL};
+    
     execvp("ls", args);      // 替換程式，FD 1 仍指向檔案
+    
     _exit(127);
 }
+
 close(fd);
+
 wait(NULL); // 父程序等待子程序結束
+
 樣式二：簡易串接 Shell 核心架構
 C
 // 迷你 Shell 內執行命令與重導向的底層邏輯
 void execute_command(Command *cmd) {
+
     if (fork() == 0) {
+    
         if (cmd->input_file) {  // < input.txt
+        
             int fd = open(cmd->input_file, O_RDONLY);
+            
             dup2(fd, STDIN_FILENO); close(fd);
+            
         }
+        
         if (cmd->output_file) { // > output.txt
+        
             int fd = open(cmd->output_file, O_WRONLY | O_CREAT | O_TRUNC, 0644);
+            
             dup2(fd, STDOUT_FILENO); close(fd);
         }
         execvp(cmd->args[0], cmd->args);
+        
         _exit(127);
     }
+    
     if (!cmd->background) wait(NULL); // 若無 & 則等待
 }
 
